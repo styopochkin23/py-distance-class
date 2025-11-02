@@ -2,26 +2,26 @@ class Distance:
     def __init__(self, km):
         self.km = km
     def __str__(self):
-        print(f"Distance: {self.km} kilometers")
+        return f"Distance: {self.km} kilometers"
     def __repr__(self):
-        print(f"Distance(km={self.km})")
+        return f"Distance(km={self.km})"
     def __add__(self, other):
         return Distance(self.km + other.km)
     def __iadd__(self, other):
         test = self + other
-        print(f"{self.km} is {test}")
+        return f"{self.km} is {test}"
     def __mul__(self, other):
-        return Distance(self.km * other.km)
+        return self.km * other.km
     def __truediv__(self, other):
-        return Distance(self.km / other.km)
+        return self.km / other.km
     def __lt__(self, other):
-        return Distance(self.km < other.km)
+        return self.km < other.km
     def __gt__(self, other):
-        return Distance(self.km > other.km)
+        return self.km > other.km
     def __eq__(self, other):
-        return Distance(self.km == other.km)
+        return self.km == other.km
     def __le__(self, other):
-        return Distance(self.km <= other.km)
+        return self.km <= other.km
     def __ge__(self, other):
-        return Distance(self.km >= other.km)
+        return self.km >= other.km
 
